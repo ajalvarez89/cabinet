@@ -1,1 +1,2 @@
 rails g model Doc title:string content:text
+rails g controller Docs

@@ -1,2 +1,5 @@
 rails g model Doc title:string content:text
 rails g controller Docs
+
+
+rails g migration add_user_id_to_docs used_id:integer //agrega atributo al modelo 

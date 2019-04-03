@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
   
-  root 'welcome#index'
+  resources :docs #what to do?
+  authenticated :user do
+    root "docs#index", as: "authenticated_root"
+  end
 
-  resources :docs #que hace?
+  root 'welcome#index'
 end
